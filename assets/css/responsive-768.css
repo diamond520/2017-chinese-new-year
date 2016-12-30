@@ -1,0 +1,16 @@
+   /* 769px - 992px */
+    .top-links ul {
+        float: left;
+        position: relative;
+        margin-right: 50px;
+    }
+    
+    #header {
+    }
+    #header #header-wrap .container {
+    	width: 100%;
+    }
+#primary-menu {
+    display: block;
+    float: none;
+}

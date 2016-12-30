@@ -1,0 +1,51 @@
+/* 480px - 768px */
+
+.top-links ul {
+    float: left;
+    position: relative;
+    margin-right: 50px;
+}
+
+    #header {
+        height: 10px !important;
+    }
+    #header #header-wrap .container {
+    	width: 100%;
+    }
+#primary-menu {
+    display: none;
+    float: none;
+}
+.mv-info {
+}
+.mv-title {
+    width: 55%;
+    float: left;
+    color: #fff;
+    line-height: 1.4;
+    text-align: left;
+}
+.mv-btn li {
+width: 50px !important;
+}
+.mv-btn li:nth-child(3) {
+width: auto !important;
+height: 50px;
+}
+
+.mv-btn li img {
+	height: auto;
+width: 100% !important;
+}
+.mv-btn li:nth-child(3) img {
+width: auto !important;
+height: 50px !important;
+}
+
+.mv-box {
+width: 100%;
+    min-width: 320px;
+    margin: 0 auto 15px;
+    border-top: 1px solid #ac1702;
+padding: 10px 20px 0;
+}
