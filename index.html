@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
+<html dir="ltr" lang="en-US" ng-app="roosterApp">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -22,18 +22,7 @@
     <title>完娛食堂 咕雞咕雞團圓飯</title>
 </head>
 
-<body class="stretched">
-    <div id="fb-root"></div>
-    <script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.6";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
+<body class="stretched" ng-controller="roosterController">
     <!-- mobile menu
     ============================================= -->
     <ul id="menu" class="mobilenav one-page-menu" data-easing="easeInOutExpo" data-speed="1500">
@@ -166,7 +155,7 @@
         <!-- #header end -->
         <!-- Video
         ============================================= -->
-        <section id="slider" class="" style="background-color: #444;">
+        <section id="slider" class="" style="background-color: #444;" ng-controller="slideController">
             <div id="oc-slider" class="owl-carousel carousel-widget" data-margin="1" data-nav="true" data-pagi="false" data-items="1" data-merge="true" data-loop="true" data-lazyload="true" data-center="true" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-lg="4">
                 <div class="item-video" data-merge="2">
                     <div class="mv-warp">
@@ -175,14 +164,15 @@
                     <div class="mv-info">
                         <div class="mv-title">影片標題20字影片標題20字影片標題20字影片標題20字影片標題20字</div>
                         <ul class="mv-btn">
-                            <li>
+                            <li ng-class="{'inactive':status==false}">
                                 <a class="btn-hover" href="#"><img src="assets/img/btn-like.png"></a>
                             </li>
-                            <li>
-                                <a class="btn-hover" href="#"><img src="assets/img/btn-fb.png"></a>
+                            <li ng-class="{'inactive':status==false}">
+                                <a class="btn-hover" href="#" ng-click="check()"><img src="assets/img/btn-fb.png"></a>
                             </li>
+                            
                             <li>
-                                <a class="btn-hover" href="#"><img src="assets/img/btn-join.png"></a>
+                                <a class="btn-hover" href="" ng-click="fbLogin()"><img src="assets/img/btn-join.png"></a>
                             </li>
                         </ul>
                     </div>
@@ -724,6 +714,11 @@
     ============================================= -->
     <script type="text/javascript" src="assets/js/functions.js"></script>
     <script type="text/javascript" src="assets/simplemenu/js/simplemenu.js"></script>
+    <script type="text/javascript" src="assets/lib/angular.min.js"></script>
+    <script type="text/javascript" src="assets/lib/app.js"></script>
+    <script type="text/javascript" src="assets/lib/ngFacebook.js"></script>
+    <script type="text/javascript" src="assets/lib/service.js"></script>
+    <script type="text/javascript" src="assets/lib/controller.js"></script>
+    <script type="text/javascript" src="//connect.facebook.net/zh_TW/sdk.js"></script>
 </body>
-
 </html>
