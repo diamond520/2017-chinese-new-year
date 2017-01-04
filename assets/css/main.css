@@ -33130,3 +33130,9 @@ ul.switcher-op-selectors li img {
 
 .mv-banner { padding-top: 10px;}
 
+.mv-info li.inactive {
+    opacity: .7;
+}
+.opacity-black { width: 61px; height: 61px; background-color: #000; }
+.opacity-black a { transition: opacity .5s; opacity: 1; }
+.opacity-black a:hover { opacity: 0.4; }
