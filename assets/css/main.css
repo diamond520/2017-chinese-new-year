@@ -6341,7 +6341,7 @@ button.close {
     margin-left: -30%;
     padding-left: 0;
     list-style: none;
-    text-align: center
+    text-align: center;
 }
 
 .carousel-indicators li {
@@ -6353,8 +6353,8 @@ button.close {
     border: 1px solid #fff;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #000\9;
-    background-color: rgba(0, 0, 0, 0)
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .carousel-indicators .active {
@@ -33067,7 +33067,7 @@ ul.switcher-op-selectors li img {
 }
 
 #portfolio figure {
-    display: ;
+    /*display: ;*/
 }
 
 #loadMore {
