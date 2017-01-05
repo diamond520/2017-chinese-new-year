@@ -1,0 +1,22 @@
+<figure class="{{ post.className }}">
+    <div class="sp-box" ng-if="post.type == 'post'">
+        <div class="portfolio-image">
+            <a href="{{ post.url }}" target="_blank">
+                <img ng-src="{{ post.imgSrc }}" alt="">
+            </a>
+            <div class="portfolio-overlay">
+                <a href="{{ post.url }}" class="center-icon" target="_blank"><i class="icon-line-plus"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-desc">
+            <h3><a href="{{ post.url }}" target="_blank">{{ post.title }}</a></h3>
+            <p>{{ post.desc }}</p>
+        </div>
+    </div>
+    <div class="sp-box-banner" ng-if="post.type == 'ad'">
+        <a href="#" target="_blank">
+            <div data-ng-dfp-ad="ad-300x600"></div>
+            <!--<div data-ng-dfp-ad="dfp-default-0"></div>-->
+        </a>
+    </div>
+</figure>

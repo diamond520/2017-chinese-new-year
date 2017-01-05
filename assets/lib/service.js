@@ -1,7 +1,27 @@
 'use strict';
-app.factory('isetVoteBackEnd', ['$rootScope', '$http', '$upload', function($rootScope, $http, $upload){
-  return {
 
+app.factory('roosterService', ['$http', function($http){
+  var apiGateWay = {
+      setn: 'https://m908qvobqd.execute-api.ap-northeast-1.amazonaws.com/prod/setn',
+  };
+  var endpoint = {
+    projectNews: apiGateWay.setn + '/projectnewslist',
+  };
+  return {
+    projectnews: function(){
+      var projectId = 2856;
+      var requestUrl = endpoint.projectNews + '/' + projectId ;
+      return $http.get(requestUrl);
+              // .then(function (response) {
+              //   console.log('get', response)
+              // })
+              // .catch(function (data) {
+              //   // Handle error here
+              // });
+    },
+    video: function(){
+      return;
+    }
   };
 }]);
 

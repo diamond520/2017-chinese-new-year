@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US" ng-app="roosterApp">
+<html dir="ltr" lang="en-US">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="" />
-    <!--<meta property="fb:app_id" content="264733290612135" />-->
-    <meta property="fb:admins" content="100005669711362" />
-    <meta property="fb:app_id" content="1385360291698338" /
     <!-- Stylesheets
     ============================================= -->
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
@@ -24,15 +21,19 @@
     ============================================= -->
     <title>完娛食堂 咕雞咕雞團圓飯</title>
 </head>
-<body class="stretched" ng-controller="roosterController">
+
+<body class="stretched">
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=1385360291698338";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- mobile menu
     ============================================= -->
     <ul id="menu" class="mobilenav one-page-menu" data-easing="easeInOutExpo" data-speed="1500">
@@ -163,11 +164,11 @@
             </div>
         </header>
         <!-- #header end -->
-        <!-- Video
+        <!-- Video 
         ============================================= -->
-        <section id="slider" class="" style="background-color: #444;" ng-controller="slideController">
+        <section id="slider" class="" style="background-color: #444;">
             <div id="oc-slider" class="owl-carousel carousel-widget" data-margin="1" data-nav="true" data-pagi="false" data-items="1" data-merge="true" data-loop="true" data-lazyload="true" data-center="true" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-lg="4">
-                <div id="a1" class="item-video" data-merge="2">
+                <div class="item-video" data-merge="2">
                     <div class="mv-warp">
                         <a class="owl-video" href="https://www.youtube.com/embed/SBjAwupdFsU"></a>
                     </div>
@@ -175,42 +176,89 @@
                         <div class="mv-title">影片標題20字影片標題20字影片標題20字影片標題20字影片標題20字</div>
                         <ul class="mv-btn">
                             <li>
-                                <a href="" style="width:52px; height:61px; display: block;">
-                                    <!--<div class="fb-like" data-href="https://www.facebook.com/Chinesetest2017/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>-->
-                                    <div class="fb-like" data-href="https://www.facebook.com/setshowbiz/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
-                                    <!--<img src="assets/img/btn-like.png">-->
-                                </a>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-like.png"></a>
                             </li>
-                            <li ng-class="{'inactive':status==false}">
-                                <a class="btn-hover" href="" ng-click="share()"><img src="assets/img/btn-fb.png"></a>
-                            </li>
-                            
                             <li>
-                                <a class="btn-hover" href="" ng-click="fbLogin()"><img src="assets/img/btn-join.png"></a>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-fb.png"></a>
+                            </li>
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-join.png"></a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div id="a2" class="item-video" data-merge="2">
+                <div class="item-video" data-merge="2">
                     <div class="mv-warp">
-                        <a class="owl-video" href="https://www.youtube.com/embed/1TCgqhpGSEg"></a>
+                        <a class="owl-video" href="https://www.youtube.com/embed/SBjAwupdFsU"></a>
                     </div>
                     <div class="mv-info">
-                        <div class="mv-title">;dsijfjo;woijefo;jiw;fj;weoaijf;oweijfoeiwjfoeijoj iwejofjoew</div>
+                        <div class="mv-title">影片標題20字影片標題20字影片標題20字影片標題20字影片標題20字</div>
                         <ul class="mv-btn">
                             <li>
-                                <a href="" style="width:52px; height:61px; display: block;">
-                                    <!--<div class="fb-like" data-href="https://www.facebook.com/Chinesetest2017/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>-->
-                                    <div class="fb-like" data-href="https://www.facebook.com/setshowbiz/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
-                                    <!--<img src="assets/img/btn-like.png">-->
-                                </a>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-like.png"></a>
                             </li>
-                            <li ng-class="{'inactive':status==false}">
-                                <a class="btn-hover" href="" ng-click="share()"><img src="assets/img/btn-fb.png"></a>
-                            </li>
-                            
                             <li>
-                                <a class="btn-hover" href="" ng-click="fbLogin()"><img src="assets/img/btn-join.png"></a>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-fb.png"></a>
+                            </li>
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-join.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-video" data-merge="2">
+                    <div class="mv-warp">
+                        <a class="owl-video" href="https://www.youtube.com/embed/SBjAwupdFsU"></a>
+                    </div>
+                    <div class="mv-info">
+                        <div class="mv-title">影片標題20字影片標題20字影片標題20字影片標題20字影片標題20字</div>
+                        <ul class="mv-btn">
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-like.png"></a>
+                            </li>
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-fb.png"></a>
+                            </li>
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-join.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-video" data-merge="2">
+                    <div class="mv-warp">
+                        <a class="owl-video" href="https://www.youtube.com/embed/SBjAwupdFsU"></a>
+                    </div>
+                    <div class="mv-info">
+                        <div class="mv-title">影片標題20字影片標題20字影片標題20字影片標題20字影片標題20字</div>
+                        <ul class="mv-btn">
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-like.png"></a>
+                            </li>
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-fb.png"></a>
+                            </li>
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-join.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-video" data-merge="2">
+                    <div class="mv-warp">
+                        <a class="owl-video" href="https://www.youtube.com/embed/SBjAwupdFsU"></a>
+                    </div>
+                    <div class="mv-info">
+                        <div class="mv-title">影片標題20字影片標題20字影片標題20字影片標題20字影片標題20字</div>
+                        <ul class="mv-btn">
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-like.png"></a>
+                            </li>
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-fb.png"></a>
+                            </li>
+                            <li>
+                                <a class="btn-hover" href="#"><img src="assets/img/btn-join.png"></a>
                             </li>
                         </ul>
                     </div>
@@ -222,14 +270,22 @@
                     <li>
                         <iframe src="http://player.vimeo.com/video/80975867" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0" frameborder="0"></iframe>
                     </li>
+                    <li>
+                        <iframe src="http://player.vimeo.com/video/80975867" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0" frameborder="0"></iframe>
+                    </li>
+                    <li>
+                        <iframe src="http://player.vimeo.com/video/80975867" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0" frameborder="0"></iframe>
+                    </li>
+                    <li>
+                        <iframe src="http://player.vimeo.com/video/80975867" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0" frameborder="0"></iframe>
+                    </li>
+                    <li>
+                        <iframe src="http://player.vimeo.com/video/80975867" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0" frameborder="0"></iframe>
+                    </li>
                 </ul>
                 <div class="center mv-banner">
-                    <a class="hidden-xs" href="#" target="_blabk">
-                        <!--<div data-ng-dfp-ad="div-gpt-ad-1483514476568-0"></div>-->
-                    </a>
-                    <a class="visible-xs" href="#" target="_blabk">
-                        <!--<div data-ng-dfp-ad="div-gpt-ad-1483514524445-0"></div>-->
-                    </a>
+                <a class="hidden-xs" href="#" target="_blabk"><img src="assets/banner/728x90.jpg"></a>
+                <a class="visible-xs" href="#" target="_blabk"><img src="assets/banner/320x50.jpg"></a>
                 </div>
             </div>
         </section>
@@ -240,16 +296,14 @@
             <div class="container clearfix">
                 <div class="postcontent">
                     <!-- Facebook Comments Plugin -->
-                    <!--<div class="fb-comments" data-href="http://www.setn.com/event/starmonkey/index.aspx" data-width="800" data-numposts="5"></div>-->
-                    <!--<div class="fb-comments" data-href="http://www.setn.com/event/starmonkey/index.aspx" data-width="800" data-numposts="5"></div>-->
-                    <div class="fb-comments" data-href="http://localhost/2017-chinese-new-year/" data-width="100%" data-numposts="5" data-order-by="social"></div>
+                <div class="fb-comments" data-href="http://www.setn.com/event/starmonkey/index.aspx" data-width="100%" data-numposts="5"></div>
                 </div>
             </div>
         </section>
         <!-- #FB Comments end -->
         <!-- Post
         ============================================= -->
-        <section id="content-post" ng-controller="postController">
+        <section id="content-post">
             <div class="title"></div>
             <div class="content-wrap nopadding">
                 <!-- Portfolio Items
@@ -258,8 +312,173 @@
                     <!-- Portfolio Items
                     ============================================= -->
                     <div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-masonry clearfix">
-                        <portfolio ng-repeat="post in posts"></portfolio>
-                        <!--<div data-ng-dfp-ad="div-gpt-ad-1483514553468-0" data-ng-dfp-ad-hide-when-empty></div>-->
+                        <!-- 單一圖片 -->
+                        <figure class="portfolio-item pf-media pf-icons">
+                            <div class="sp-box">
+                                <div class="portfolio-image">
+                                    <a href="portfolio-single.php">
+                                        <img src="http://attach.azureedge.net/newsimages/2016/12/29/760461-XXL.jpg" alt="">
+                                    </a>
+                                    <div class="portfolio-overlay">
+                                        <a href="#" class="center-icon"><i class="icon-line-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-desc">
+                                    <h3><a href="#" target="_blank">標題無限制字數標題無限制字數標題無限制字數標題無限制字數標題無限制字數</a></h3>
+                                    <p>
+                                        2016年不為人知的秘境正盛行，人們鋪天蓋地的湧入拍照、打卡，讓秘境不再秘密，但有些美麗的景致已經悄悄關閉，想看也只能從照片回味了，快來看看2016有哪些美景們被封印了，千萬別白跑一趟呀！
+                                    </p>
+                                </div>
+                            </div>
+                        </figure>
+                        <!-- 可放影片 -->
+                        <figure class="portfolio-item pf-graphics pf-uielements">
+                            <div class="sp-box">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="http://attach.azureedge.net/newsimages/2016/12/29/760484-XXL.jpg" alt="Mac Sunglasses">
+                                    </a>
+                                    <div class="portfolio-overlay">
+                                        <a href="http://player.vimeo.com/video/87701971" class="center-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-desc">
+                                    <h3><a href="#" target="_blank">標題無限制字數標題無限制字數標題無限制字數標題無限制字數標題無限制字數</a></h3>
+                                    <p>
+                                        2016年不為人知的秘境正盛行，人們鋪天蓋地的湧入拍照、打卡，讓秘境不再秘密，但有些美麗的景致已經悄悄關閉，想看也只能從照片回味了，快來看看2016有哪些美景們被封印了，千萬別白跑一趟呀！
+                                    </p>
+                                </div>
+                            </div>
+                        </figure>
+                        <!-- 多張圖片 -->
+                        <figure class="portfolio-item pf-icons pf-illustrations">
+                            <div class="sp-box">
+                                <div class="portfolio-image">
+                                    <div class="fslider" data-arrows="false" data-speed="400" data-pause="4000">
+                                        <div class="flexslider">
+                                            <div class="slider-wrap">
+                                                <div class="slide">
+                                                    <a href="#"><img src="http://attach.azureedge.net/newsimages/2016/12/29/760203-XXL.jpg"></a>
+                                                </div>
+                                                <div class="slide">
+                                                    <a href="#"><img src="http://attach.azureedge.net/newsimages/2016/12/29/760203-XXL.jpg"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-overlay">
+                                        <a href="#" class="center-icon"><i class="icon-line-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-desc">
+                                    <h3><a href="#" target="_blank">狙擊少女心！專屬妳的「迪士尼公主快閃店」華麗登台</a></h3>
+                                    <p>
+                                        女生們注意了！全台首間針對年輕女性打造的「迪士尼公主快閃店」登台囉！引進超過250項、擁有自由、冒險、勇敢、堅定新公主特質的全新迪士尼公主系列夢幻逸品，自12月29日起將接連於微風信義B1樓捷運聯通道、微風南京「Zakka House」登場；以及於明年3月微風松高「Zakka House」本店更全面打造迪士尼公主主題，要讓年輕女性們大飽收集慾！
+                                    </p>
+                                </div>
+                            </div>
+                        </figure>
+                        <!-- banner 300x600 -->
+                        <figure class="portfolio-item pf-media pf-icons">
+                            <div class="sp-box-banner">
+                                <a href="#" target="_blank"><img src="assets/banner/300x600.jpg"></a>
+                            </div>
+                        </figure>
+                        <!-- 單一圖片 -->
+                        <figure class="portfolio-item pf-media pf-icons">
+                            <div class="sp-box">
+                                <div class="portfolio-image">
+                                    <a href="portfolio-single.php">
+                                        <img src="http://attach.azureedge.net/newsimages/2016/12/29/760461-XXL.jpg" alt="">
+                                    </a>
+                                    <div class="portfolio-overlay">
+                                        <a href="#" class="center-icon"><i class="icon-line-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-desc">
+                                    <h3><a href="#" target="_blank">標題無限制字數標題無限制字數標題無限制字數標題無限制字數標題無限制字數</a></h3>
+                                    <p>
+                                        2016年不為人知的秘境正盛行，人們鋪天蓋地的湧入拍照、打卡，讓秘境不再秘密，但有些美麗的景致已經悄悄關閉，想看也只能從照片回味了，快來看看2016有哪些美景們被封印了，千萬別白跑一趟呀！
+                                    </p>
+                                </div>
+                            </div>
+                        </figure>
+                        <!-- 單一圖片 -->
+                        <figure class="portfolio-item pf-media pf-icons">
+                            <div class="sp-box">
+                                <div class="portfolio-image">
+                                    <a href="portfolio-single.php">
+                                        <img src="http://attach.azureedge.net/newsimages/2016/12/29/760461-XXL.jpg" alt="">
+                                    </a>
+                                    <div class="portfolio-overlay">
+                                        <a href="#" class="center-icon"><i class="icon-line-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-desc">
+                                    <h3><a href="#" target="_blank">標題無限制字數標題無限制字數標題無限制字數標題無限制字數標題無限制字數</a></h3>
+                                    <p>
+                                        2016年不為人知的秘境正盛行，人們鋪天蓋地的湧入拍照、打卡，讓秘境不再秘密，但有些美麗的景致已經悄悄關閉，想看也只能從照片回味了，快來看看2016有哪些美景們被封印了，千萬別白跑一趟呀！
+                                    </p>
+                                </div>
+                            </div>
+                        </figure>
+                        <!-- 單一圖片 -->
+                        <figure class="portfolio-item pf-media pf-icons">
+                            <div class="sp-box">
+                                <div class="portfolio-image">
+                                    <a href="portfolio-single.php">
+                                        <img src="http://attach.azureedge.net/newsimages/2016/12/29/760461-XXL.jpg" alt="">
+                                    </a>
+                                    <div class="portfolio-overlay">
+                                        <a href="#" class="center-icon"><i class="icon-line-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-desc">
+                                    <h3><a href="#" target="_blank">標題無限制字數標題無限制字數標題無限制字數標題無限制字數標題無限制字數</a></h3>
+                                    <p>
+                                        2016年不為人知的秘境正盛行，人們鋪天蓋地的湧入拍照、打卡，讓秘境不再秘密，但有些美麗的景致已經悄悄關閉，想看也只能從照片回味了，快來看看2016有哪些美景們被封印了，千萬別白跑一趟呀！
+                                    </p>
+                                </div>
+                            </div>
+                        </figure>
+                        <!-- 單一圖片 -->
+                        <figure class="portfolio-item pf-media pf-icons">
+                            <div class="sp-box">
+                                <div class="portfolio-image">
+                                    <a href="portfolio-single.php">
+                                        <img src="http://attach.azureedge.net/newsimages/2016/12/29/760461-XXL.jpg" alt="">
+                                    </a>
+                                    <div class="portfolio-overlay">
+                                        <a href="#" class="center-icon"><i class="icon-line-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-desc">
+                                    <h3><a href="#" target="_blank">標題無限制字數標題無限制字數標題無限制字數標題無限制字數標題無限制字數</a></h3>
+                                    <p>
+                                        2016年不為人知的秘境正盛行，人們鋪天蓋地的湧入拍照、打卡，讓秘境不再秘密，但有些美麗的景致已經悄悄關閉，想看也只能從照片回味了，快來看看2016有哪些美景們被封印了，千萬別白跑一趟呀！
+                                    </p>
+                                </div>
+                            </div>
+                        </figure>
+                        <!-- 單一圖片 -->
+                        <figure class="portfolio-item pf-media pf-icons">
+                            <div class="sp-box">
+                                <div class="portfolio-image">
+                                    <a href="portfolio-single.php">
+                                        <img src="http://attach.azureedge.net/newsimages/2016/12/29/760461-XXL.jpg" alt="">
+                                    </a>
+                                    <div class="portfolio-overlay">
+                                        <a href="#" class="center-icon"><i class="icon-line-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-desc">
+                                    <h3><a href="#" target="_blank">標題無限制字數標題無限制字數標題無限制字數標題無限制字數標題無限制字數</a></h3>
+                                    <p>
+                                        2016年不為人知的秘境正盛行，人們鋪天蓋地的湧入拍照、打卡，讓秘境不再秘密，但有些美麗的景致已經悄悄關閉，想看也只能從照片回味了，快來看看2016有哪些美景們被封印了，千萬別白跑一趟呀！
+                                    </p>
+                                </div>
+                            </div>
+                        </figure>
                         <div class="clearfix"></div>
                     </div>
                     <!-- #portfolio end -->
@@ -505,12 +724,6 @@
     ============================================= -->
     <script type="text/javascript" src="assets/js/functions.js"></script>
     <script type="text/javascript" src="assets/simplemenu/js/simplemenu.js"></script>
-    <script type="text/javascript" src="assets/lib/angular.min.js"></script>
-    <script type="text/javascript" src="assets/lib/ngFacebook.js"></script>
-    <script type="text/javascript" src="assets/lib/ngDfp.min.js"></script>
-    <script type="text/javascript" src="assets/lib/app.js"></script>
-    <script type="text/javascript" src="assets/lib/service.js"></script>
-    <script type="text/javascript" src="assets/lib/controller.js"></script>
-    <script type="text/javascript" src="assets/lib/directives.js"></script>
 </body>
+
 </html>
