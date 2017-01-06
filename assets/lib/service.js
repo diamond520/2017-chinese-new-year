@@ -12,18 +12,57 @@ app.factory('roosterService', ['$http', function($http){
       var projectId = 2856;
       var requestUrl = endpoint.projectNews + '/' + projectId ;
       return $http.get(requestUrl);
-              // .then(function (response) {
-              //   console.log('get', response)
-              // })
-              // .catch(function (data) {
-              //   // Handle error here
-              // });
+      // .then(function (response) {
+      //   console.log('get', response)
+      // })
+      // .catch(function (data) {
+      //   // Handle error here
+      // });
     },
     video: function(){
       return;
     }
   };
 }]);
+
+app.factory('lottery', function(config, $http, $httpParamSerializer) {
+  return {
+    getalloption: function() {
+      return $http.get(config.apiUri + 'getalloption/' + config.spaceId, {});
+    },
+    getVoteObject: function(userData){
+      var userData = typeof userData !== 'object' ? { type: '', userId: ''} : userData;
+      var request = {
+        method: 'POST',
+        url: config.apiUri + 'getalloption/' + config.spaceId,
+        data: decodeURIComponent($.param(userData)),
+        withCredentials: true,
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+      };
+      return $http(request);
+    },
+    postVote: function(userData){
+
+      var vote = {
+        voteListId : '235',
+        fileName : "da3fc241d11c79e42cab.jpeg",
+        userId : userData,
+        spaceId : '92',
+        // validateKey: validateKey,
+        at : userData.auth.access_token
+      };
+      var request = {
+        method: 'POST',
+        url: config.apiUri + 'vote',
+        data: decodeURIComponent($.param(vote)),
+        withCredentials: true,
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+      };
+      // console.log(vote , request);
+      return $http(request);
+    },
+  };
+});
 
 app.service('Facebook', ['$http', '$location', function ($http, $location) {
   var settings = {

@@ -1,6 +1,15 @@
 'use strict';
-var app = angular.module('roosterApp', ['ngFacebook', 'ngDfp'])
-.config( function( $facebookProvider ) {
+var app = angular.module('roosterApp', [
+  'ngFacebook', 
+  'ngDfp', 
+  // 'angular-owl-carousel', 
+  // 'angular-owl-carousel-directive'
+]).constant('config', {
+  'baseUri': 'http://event.setn.com/oceankingdom/',
+  'apiUri': 'http://event.setn.com/webEventBackend/ajax/space/',
+  'spaceId': '92',
+  'listId': '235',
+}).config( function( $facebookProvider ) {
   $facebookProvider.setAppId('264733290612135').setPermissions(['email']);
 }).config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
@@ -25,4 +34,15 @@ var app = angular.module('roosterApp', ['ngFacebook', 'ngDfp'])
   $rootScope.$on('fb.load', function() {
     $window.dispatchEvent(new Event('fb.load'));
   });
-}]);
+}])
+.controller('MyController', MyController);
+
+function MyController() {
+    this.owl = {
+        items: ["item 1", "item 2"],
+        options: {
+            loop: true,
+            nav: false
+        }
+    };
+}

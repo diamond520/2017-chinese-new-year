@@ -166,8 +166,8 @@
         <!-- Video
         ============================================= -->
         <section id="slider" class="" style="background-color: #444;" ng-controller="slideController">
-            <div id="oc-slider" class="owl-carousel carousel-widget" data-margin="1" data-nav="true" data-pagi="false" data-items="1" data-merge="true" data-loop="true" data-lazyload="true" data-center="true" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-lg="4">
-                <div id="a1" class="item-video" data-merge="2">
+            <div id="oc-slider" class="owl-carousel carousel-widget" data-margin="1" data-nav="true" data-pagi="false" data-items="1" data-merge="true" data-loop="false" data-lazyload="true" data-center="true" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-lg="4">
+                <div class="item-video" data-merge="2">
                     <div class="mv-warp">
                         <a class="owl-video" href="https://www.youtube.com/embed/SBjAwupdFsU"></a>
                     </div>
@@ -176,41 +176,15 @@
                         <ul class="mv-btn">
                             <li>
                                 <a href="" style="width:52px; height:61px; display: block;">
-                                    <!--<div class="fb-like" data-href="https://www.facebook.com/Chinesetest2017/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>-->
                                     <div class="fb-like" data-href="https://www.facebook.com/setshowbiz/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
-                                    <!--<img src="assets/img/btn-like.png">-->
                                 </a>
                             </li>
                             <li ng-class="{'inactive':status==false}">
                                 <a class="btn-hover" href="" ng-click="share()"><img src="assets/img/btn-fb.png"></a>
                             </li>
                             
-                            <li>
-                                <a class="btn-hover" href="" ng-click="fbLogin()"><img src="assets/img/btn-join.png"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="a2" class="item-video" data-merge="2">
-                    <div class="mv-warp">
-                        <a class="owl-video" href="https://www.youtube.com/embed/1TCgqhpGSEg"></a>
-                    </div>
-                    <div class="mv-info">
-                        <div class="mv-title">;dsijfjo;woijefo;jiw;fj;weoaijf;oweijfoeiwjfoeijoj iwejofjoew</div>
-                        <ul class="mv-btn">
-                            <li>
-                                <a href="" style="width:52px; height:61px; display: block;">
-                                    <!--<div class="fb-like" data-href="https://www.facebook.com/Chinesetest2017/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>-->
-                                    <div class="fb-like" data-href="https://www.facebook.com/setshowbiz/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
-                                    <!--<img src="assets/img/btn-like.png">-->
-                                </a>
-                            </li>
-                            <li ng-class="{'inactive':status==false}">
-                                <a class="btn-hover" href="" ng-click="share()"><img src="assets/img/btn-fb.png"></a>
-                            </li>
-                            
-                            <li>
-                                <a class="btn-hover" href="" ng-click="fbLogin()"><img src="assets/img/btn-join.png"></a>
+                            <li ng-class="{'inactive':lotteryed==true}">
+                                <a ng-class="btn-hover" href="" ng-click="goLottery()"><img  src="assets/img/btn-join.png"></a>
                             </li>
                         </ul>
                     </div>
@@ -219,17 +193,18 @@
             <div class="mv-box">
                 <img src="assets/img/mv-title.png">
                 <ul class="hidden-xs visible-sm visible-md visible-lg">
-                    <li>
-                        <iframe src="http://player.vimeo.com/video/80975867" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0" frameborder="0"></iframe>
+                    <li ng-repeat="v in owlItems">
+                        <img ng-src="{{ v.imgSrc }}">
+                        <!--<iframe src="http://player.vimeo.com/video/80975867" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0" frameborder="0"></iframe>-->
                     </li>
                 </ul>
                 <div class="center mv-banner">
-                    <a class="hidden-xs" href="#" target="_blabk">
-                        <!--<div data-ng-dfp-ad="div-gpt-ad-1483514476568-0"></div>-->
-                    </a>
-                    <a class="visible-xs" href="#" target="_blabk">
-                        <!--<div data-ng-dfp-ad="div-gpt-ad-1483514524445-0"></div>-->
-                    </a>
+                    <!--<a class="hidden-xs" href="" target="_blabk">-->
+                        <dfp class="hidden-xs" ad="ad-728x90"></dfp>
+                    <!--</a>-->
+                    <!--<a class="visible-xs" href="" target="_blabk">-->
+                        <dfp class="visible-xs" ad="ad-m-300x50"></dfp>
+                    <!--</a>-->
                 </div>
             </div>
         </section>
@@ -352,7 +327,7 @@
                     </div>
                     <div class="col_one_third col_last">
                         <div class="sp-box-banner ">
-                            <img src="assets/banner/300x250.jpg">
+                            <dfp ad="ad-300x250"></dfp>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -508,6 +483,8 @@
     <script type="text/javascript" src="assets/lib/angular.min.js"></script>
     <script type="text/javascript" src="assets/lib/ngFacebook.js"></script>
     <script type="text/javascript" src="assets/lib/ngDfp.min.js"></script>
+    <script type="text/javascript" src="assets/lib/oc.js"></script>
+    <script type="text/javascript" src="assets/lib/oc2.js"></script>
     <script type="text/javascript" src="assets/lib/app.js"></script>
     <script type="text/javascript" src="assets/lib/service.js"></script>
     <script type="text/javascript" src="assets/lib/controller.js"></script>

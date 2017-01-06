@@ -32983,7 +32983,7 @@ ul.switcher-op-selectors li img {
 .mv-box ul li {
     width: 20%;
     float: left;
-    height: 80px;
+    /*height: 80px;*/
     padding: 0 5px;
 }
 
@@ -33135,8 +33135,8 @@ ul.switcher-op-selectors li img {
 
 .mv-banner { padding-top: 10px;}
 
-.mv-info li.inactive {
-    opacity: .7;
+.inactive {
+    opacity: .6;
 }
 .opacity-black { width: 61px; height: 61px; background-color: #000; }
 .opacity-black a { transition: opacity .5s; opacity: 1; }
