@@ -46,8 +46,8 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 			console.log($scope.userData);
 			$lottery.getVoteObject({type: $scope.userData.type, userId: $scope.userData.auth.userId})
 			.then(function(data){
-				$scope.lotteryList = data.data.data[0];
-				$scope.lotteryItem = $scope.lotteryList.data[0];
+				var lotteryList = data.data.data[0];
+				$scope.lotteryItem = lotteryList.data[0];
 				$scope.lotteryed = $scope.lotteryItem.voted;
 				console.log($scope.lotteryItem);
 				console.log($scope.lotteryed);
@@ -77,7 +77,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		}
 	};
 
-	$scope.share = function(){
+	$scope.share = function(id){
 		if(!$scope.status){
 			console.log('not login');
 			return;
@@ -86,11 +86,8 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		var url = "http://www.facebook.com/sharer/sharer.php?u=http://share.settv.com.tw/og/";
 		$window.open(url,'facebook-share-dialog','width=626,height=436');
 	}
-
 	$scope.owlItems = [
-    	{"videoId" : "QsgKVMu807c", "videoTitle" : "《HERO@TAIWAN_台灣真英雄》義勇助人-甘惠忠"},
-		{"videoId" : "U68uKDQPOMU", "videoTitle" : "《HERO@TAIWAN_台灣真英雄》善行義舉-廖文華"},
-		{"videoId" : "a6MbEG9hkLc", "videoTitle" : "《HERO@TAIWAN_台灣真英雄》善行義舉-李百文"}
+		{"videoId" : "SBjAwupdFsU", "videoTitle" : "《HERO@TAIWAN_台灣真英雄》義勇助人-甘惠忠"},
 	];
 	angular.forEach($scope.owlItems, function(data, index){
 		data.imgSrc = 'http://img.youtube.com/vi/'+data.videoId+'/0.jpg';
@@ -109,8 +106,6 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		"items-sm": 3,
 		"items-lg": 4
 	};
-
-
 }]);
 
 app.controller('postController', ['$scope', '$window', '$http', 'roosterService', function($scope, $window, $http, $roosterService){
@@ -139,5 +134,14 @@ app.controller('postController', ['$scope', '$window', '$http', 'roosterService'
 			className: 'portfolio-item pf-media pf-icons',
 		}
 		$scope.posts.splice(index, 0, ad);
+		$scope.showpost = $scope.posts.splice(0,6);
+		// console.log($scope.posts);
 	});
+
+	$scope.load = function(){
+		console.log('load more');
+		// console.log($scope.posts);
+		$scope.showpost = $scope.posts.splice(0,6);
+		// console.log($scope.showpost);
+	}
 }]);

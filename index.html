@@ -54,13 +54,14 @@
                 <tbody>
                     <tr>
                         <td>
-                            <a href="#"><img src="assets/img/top-fb.png" alt=""></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://event.setn.com/2017chinesenewyear" target="_blank"><img src="assets/img/top-fb.png" alt=""></a>
                         </td>
                         <td>
-                            <a href="#"><img src="assets/img/top-line.png" alt=""></a>
+                            <a href="http://line.naver.jp/R/msg/text/?完娛食堂 咕雞咕雞團圓飯 http://52.197.56.42/2017/"><img src="assets/img/top-line.png" alt=""></a>
                         </td>
                         <td>
-                            <a href="#"><img src="assets/img/top-wb.png" alt=""></a>
+                            <a class="jiathis_button_tsina"><img src="assets/img/top-wb.png" alt=""></a>
+                            <script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
                         </td>
                     </tr>
                 </tbody>
@@ -84,13 +85,13 @@
                     <div class="top-links">
                         <ul>
                             <li>
-                                <a href="#"><img src="assets/img/top-fb.png"></a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=http://event.setn.com/2017chinesenewyear" target="_blank"><img src="assets/img/top-fb.png"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="assets/img/top-line.png"></a>
+                                <a href="http://line.naver.jp/R/msg/text/?完娛食堂 咕雞咕雞團圓飯 http://52.197.56.42/2017/"><img src="assets/img/top-line.png" alt=""></a>
                             </li>
                             <li>
-                                <a href="#"><img src="assets/img/top-wb.png"></a>
+                                <a class="jiathis_button_tsina"><img src="assets/img/top-wb.png" alt=""></a>
                             </li>
                         </ul>
                     </div>
@@ -117,11 +118,11 @@
             <div class="content-wrap nopadding">
                 <div class="section nomargin nopadding noborder">
                     <div class="center clearfix">
-                        <div class="kv-a hidden-xs">
+                        <div class="kv-a hidden-sm hidden-xs">
                             <iframe src="assets/canvas/kv.html" scrolling="no" frameborder="0" allowtransparency="true" style=" width:100%; height: 100%; margin:0 auto;"></iframe>
                         </div>
-                        <div class="kv-b visible-xs">
-                            <iframe src="assets/canvas/kv.html" scrolling="no" frameborder="0" allowtransparency="true" style=" width:100%; height: 100%; margin:0 auto;"></iframe>
+                        <div class="kv-b hidden-md visible-sm visible-xs ">
+                            <iframe src="assets/canvas/kv-b.html" scrolling="no" frameborder="0" allowtransparency="true" style=" width:100%; height: auto; margin:0 auto;"></iframe>
                         </div>
                     </div>
                 </div>
@@ -192,7 +193,7 @@
             </div>
             <div class="mv-box">
                 <img src="assets/img/mv-title.png">
-                <ul class="hidden-xs visible-sm visible-md visible-lg">
+                <ul class="hidden-xs visible-sm visible-md visible-lg" ng-if="owlItems.length > 1">
                     <li ng-repeat="v in owlItems">
                         <img ng-src="{{ v.imgSrc }}">
                         <!--<iframe src="http://player.vimeo.com/video/80975867" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0" frameborder="0"></iframe>-->
@@ -233,13 +234,14 @@
                     <!-- Portfolio Items
                     ============================================= -->
                     <div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-masonry clearfix">
-                        <portfolio ng-repeat="post in posts"></portfolio>
+                        <portfolio ng-repeat="post in showpost"></portfolio>
                         <!--<div data-ng-dfp-ad="div-gpt-ad-1483514553468-0" data-ng-dfp-ad-hide-when-empty></div>-->
                         <div class="clearfix"></div>
                     </div>
                     <!-- #portfolio end -->
                 </div>
             </div>
+            <!--<button ng-click="load()"> load more </button>-->
         </section>
         <!-- #Post end -->
         <!-- Post

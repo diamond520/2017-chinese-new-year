@@ -1,4 +1,4 @@
-   /* 0  - 479px */
+   /* 0  - 480px */
 
  #header {
      height: 10px !important;
@@ -64,4 +64,39 @@ padding: 10px 20px 0;
     text-align: center;
 }
 .partner li .title { position: relative; width: 25%;}
+
+#fb-com {
+    background-image: url(../img/title-01b.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding-top: 120px;
+}
+
+#content-post .title {
+    width: 100%;
+    height: 120px;
+    background-position: top center;
+    background-image: url(../img/title-02b.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+#content-info .title {
+    width: 100%;
+    height: 140px;
+    background-image: url(../img/title-03b.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+#content-infob {
+    width: 100%;
+    background-image: url(../img/title-04b.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #827453; 
+    padding-bottom: 20px;
+    padding-top: 140px;
+    background-size: 100% auto;
+}
 
