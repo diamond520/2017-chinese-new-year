@@ -40,9 +40,9 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 			var auth = $facebook.getAuthResponse();
 			console.log(auth);
 			$scope.userData.auth.userId = auth.userID;
-      $scope.userData.userId = auth.userID;
-      $scope.userData.type = 'facebook';
-      $scope.userData.auth.access_token = auth.accessToken;
+			$scope.userData.userId = auth.userID;
+			$scope.userData.type = 'facebook';
+			$scope.userData.auth.access_token = auth.accessToken;
 			console.log($scope.userData);
 			$lottery.getVoteObject({type: $scope.userData.type, userId: $scope.userData.auth.userId})
 			.then(function(data){
