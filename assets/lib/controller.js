@@ -22,13 +22,13 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		$scope.lotteryItem = data.data[0];
 	});
   $scope.goLottery = function(){
-		$window.alert($scope.status);
+		// $window.alert($scope.status);
 		if(!$scope.status){
-			$window.alert('fb login fn');
+			// $window.alert('fb login fn');
 			console.log(typeof $facebook.login());
 			var a = $facebook.login();
-			$window.alert(a);
-			$window.alert('after facebook login function',$facebook.isConnected());
+			// $window.alert(a);
+			// $window.alert('after facebook login function',$facebook.isConnected());
 		}else{
 			$lottery.postVote($scope.userData)
 			.then(function(response){
