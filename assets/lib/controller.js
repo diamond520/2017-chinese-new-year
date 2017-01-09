@@ -27,7 +27,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		}else{
 			$lottery.postVote($scope.userData)
 			.then(function(response){
-				$window.alert('抽獎成功。');
+				$window.alert('請分享影片以獲得抽獎機會。');
 				$scope.lotteryed = true;
 			}).catch(function(response) {
 				if(response.data.code == 1020){
