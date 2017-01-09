@@ -10,7 +10,7 @@ var app = angular.module('roosterApp', [
   'spaceId': '92',
   'listId': '235',
 }).config( function( $facebookProvider ) {
-  $facebookProvider.setAppId('1385360291698338').setPermissions(['email']);
+  $facebookProvider.setAppId('290937077764531').setPermissions(['email']);
   //event: 290937077764531 ,fanpage: 1385360291698338, self: 264733290612135
 }).config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
@@ -29,7 +29,7 @@ var app = angular.module('roosterApp', [
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/zh_TW/sdk.js";
+    js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
   $rootScope.$on('fb.load', function() {
