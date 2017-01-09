@@ -22,8 +22,13 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		$scope.lotteryItem = data.data[0];
 	});
   $scope.goLottery = function(){
+		// $window.alert($scope.status);
 		if(!$scope.status){
-			$facebook.login();
+			// $window.alert('fb login fn');
+			console.log(typeof $facebook.login());
+			var a = $facebook.login();
+			// $window.alert(a);
+			// $window.alert('after facebook login function',$facebook.isConnected());
 		}else{
 			$lottery.postVote($scope.userData)
 			.then(function(response){
@@ -61,6 +66,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 	};
 	$scope.share = function(videoId){
 		if(!$scope.status){
+			$window.alert('請先點選【我要抽獎】');
 			return;
 		}
 		var url = "http://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/"+videoId;
