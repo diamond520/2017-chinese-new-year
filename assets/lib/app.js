@@ -10,7 +10,8 @@ var app = angular.module('roosterApp', [
   'spaceId': '92',
   'listId': '235',
 }).config( function( $facebookProvider ) {
-  $facebookProvider.setAppId('1385360291698338').setPermissions(['email']);
+  // $facebookProvider.setAppId('1385360291698338').setPermissions(['email']);
+  $facebookProvider.setAppId('264733290612135').setPermissions(['email']);
 }).config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
