@@ -4,14 +4,13 @@
 
 .entry-meta li,
 dfn {
-    font-style: italic;
+    font-style: italic
 }
 
 .fbox-effect .fbox-icon i:after,
 hr {
     -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+    -moz-box-sizing: content-box
 }
 
 hr,
@@ -23,31 +22,30 @@ img {
 .owl-carousel,
 .owl-carousel .owl-item,
 html {
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent
 }
 
 body,
 figure {
-    margin: 0;
+    margin: 0
 }
 
 .btn,
 .owl-carousel.owl-drag .owl-item {
     -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+    -moz-user-select: none
 }
 
 .navbar-fixed-bottom .navbar-collapse,
 .navbar-fixed-top .navbar-collapse,
 .pre-scrollable {
-    max-height: 340px;
+    max-height: 340px
 }
 
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
 }
 
 article,
@@ -63,7 +61,7 @@ menu,
 nav,
 section,
 summary {
-    display: block;
+    display: block
 }
 
 audio,
@@ -286,8 +284,7 @@ th {
 
 .dropdown-menu,
 .modal-content {
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
+    -webkit-background-clip: padding-box
 }
 
 .btn,
@@ -332,8 +329,7 @@ body {
 .input-block-level,
 input[type=search] {
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box
 }
 
 html {
@@ -2062,18 +2058,17 @@ output {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
 }
 
 .form-control:focus {
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
 }
 
 .form-control::-moz-placeholder {
     color: #999;
-    opacity: 1;
+    opacity: 1
 }
 
 .form-control:-ms-input-placeholder {
@@ -6204,7 +6199,7 @@ button.close {
 .testimonials-grid li,
 .video-overlay,
 .video-placeholder {
-    -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden
 }
 
 .carousel-inner>.active,
@@ -6341,7 +6336,7 @@ button.close {
     margin-left: -30%;
     padding-left: 0;
     list-style: none;
-    text-align: center;
+    text-align: center
 }
 
 .carousel-indicators li {
@@ -6353,8 +6348,8 @@ button.close {
     border: 1px solid #fff;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #000;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #000\9;
+    background-color: rgba(0, 0, 0, 0)
 }
 
 .carousel-indicators .active {
@@ -31936,7 +31931,7 @@ screen and (max-height:300px) {
         top: 3px!important
     }
     .bnews-title {
-        /*float: none;*/
+        float: none;
         display: inline-block
     }
     .bnews-slider {
@@ -32915,10 +32910,11 @@ ul.switcher-op-selectors li img {
 
 .kv-b {
     width: 100%;
-    height: 368px;
-    background-image: url(../img/kv-bg.jpg);
+    height: auto;
+    background-image: url(../img/kv-b-bg.jpg);
     background-position: center top;
     background-repeat: no-repeat;
+    background-size: auto 100%;
 }
 
 .owl-item .mv-info {
@@ -32983,7 +32979,7 @@ ul.switcher-op-selectors li img {
 .mv-box ul li {
     width: 20%;
     float: left;
-    /*height: 80px;*/
+    height: 80px;
     padding: 0 5px;
 }
 
@@ -33067,7 +33063,7 @@ ul.switcher-op-selectors li img {
 }
 
 #portfolio figure {
-    /*display: ;*/
+    display: ;
 }
 
 #loadMore {
