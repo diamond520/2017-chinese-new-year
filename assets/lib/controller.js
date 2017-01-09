@@ -77,13 +77,12 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		}
 	};
 
-	$scope.share = function(id){
+	$scope.share = function(videoId){
 		if(!$scope.status){
 			console.log('not login');
 			return;
 		}
-		console.log('share');
-		var url = "http://www.facebook.com/sharer/sharer.php?u=http://share.settv.com.tw/og/";
+		var url = "http://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/"+videoId;
 		$window.open(url,'facebook-share-dialog','width=626,height=436');
 	}
 	$scope.owlItems = [
