@@ -10,7 +10,7 @@ var app = angular.module('roosterApp', [
   'spaceId': '92',
   'listId': '235',
 }).config( function( $facebookProvider ) {
-  $facebookProvider.setAppId('290937077764531').setPermissions(['email']);
+  $facebookProvider.setAppId('264733290612135').setPermissions(['email']);
   //event: 290937077764531 ,fanpage: 1385360291698338, self: 264733290612135
 }).config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
