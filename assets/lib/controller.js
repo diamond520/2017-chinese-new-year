@@ -25,8 +25,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		// $window.alert($scope.status);
 		if(!$scope.status){
 			// $window.alert('fb login fn');
-			console.log(typeof $facebook.login());
-			var a = $facebook.login();
+			$facebook.login();
 			// $window.alert(a);
 			// $window.alert('after facebook login function',$facebook.isConnected());
 		}else{
