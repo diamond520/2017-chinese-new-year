@@ -25,10 +25,10 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		}else{
 			$lottery.postVote($scope.userData)
 			.then(function(response){
-				console.log(response);
+				// console.log(response);
 				$scope.lotteryed = true;
 			}).catch(function(response) {
-				console.error('Gists error', response.status, response.data);
+				// console.error('Gists error', response.status, response.data);
 			})
 		}
   };
@@ -38,19 +38,19 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		$scope.status = $facebook.isConnected();
 		if($scope.status) {
 			var auth = $facebook.getAuthResponse();
-			console.log(auth);
+			// console.log(auth);
 			$scope.userData.auth.userId = auth.userID;
 			$scope.userData.userId = auth.userID;
 			$scope.userData.type = 'facebook';
 			$scope.userData.auth.access_token = auth.accessToken;
-			console.log($scope.userData);
+			// console.log($scope.userData);
 			$lottery.getVoteObject({type: $scope.userData.type, userId: $scope.userData.auth.userId})
 			.then(function(data){
 				var lotteryList = data.data.data[0];
 				$scope.lotteryItem = lotteryList.data[0];
 				$scope.lotteryed = $scope.lotteryItem.voted;
-				console.log($scope.lotteryItem);
-				console.log($scope.lotteryed);
+				// console.log($scope.lotteryItem);
+				// console.log($scope.lotteryed);
 			});
 
 			// $facebook.api('/me').then(function(user) {
@@ -79,7 +79,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 
 	$scope.share = function(videoId){
 		if(!$scope.status){
-			console.log('not login');
+			// console.log('not login');
 			return;
 		}
 		var url = "http://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/"+videoId;
@@ -133,12 +133,12 @@ app.controller('postController', ['$scope', '$window', '$http', 'roosterService'
 			className: 'portfolio-item pf-media pf-icons',
 		}
 		$scope.posts.splice(index, 0, ad);
-		$scope.showpost = $scope.posts.splice(0,6);
+		// $scope.showpost = $scope.posts.splice(0,6);
 		// console.log($scope.posts);
 	});
 
 	$scope.load = function(){
-		console.log('load more');
+		// console.log('load more');
 		// console.log($scope.posts);
 		$scope.showpost = $scope.posts.splice(0,6);
 		// console.log($scope.showpost);
