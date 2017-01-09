@@ -61,6 +61,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 	};
 	$scope.share = function(videoId){
 		if(!$scope.status){
+			$window.alert('請先點選【我要抽獎】');
 			return;
 		}
 		var url = "http://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/"+videoId;
