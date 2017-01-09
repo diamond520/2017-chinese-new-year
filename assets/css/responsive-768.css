@@ -1,4 +1,4 @@
-   /* 769px - 992px */
+   /* 768px - 992px */
     .top-links ul {
         float: left;
         position: relative;
@@ -13,4 +13,62 @@
 #primary-menu {
     display: block;
     float: none;
+}
+
+ #header {
+     height: 10px !important;
+ }
+.owl-carousel.owl-drag .owl-item {
+    -ms-user-select: none;
+    user-select: none;
+    padding-bottom: 130px;
+}
+
+ .mv-info {
+    height: 130px;
+width: 100%;
+margin: 10px auto;
+z-index: 99999;
+position: absolute;
+left: 0;
+padding: 0 20px;
+}
+.mv-title {
+    width: 100%;
+    float: none;
+    color: #fff;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.mv-btn {
+    width: auto;
+    float: none;
+    list-style: none;
+    margin: 0 auto;
+    height: 50px;
+}
+.mv-btn li {
+width: 50px !important;
+}
+.mv-btn li:nth-child(3) {
+width: auto !important;
+height: 50px;
+}
+
+.mv-btn li img {
+    height: auto;
+width: 100% !important;
+}
+.mv-btn li:nth-child(3) img {
+width: auto !important;
+height: 50px !important;
+}
+
+.mv-box {
+width: 100%;
+    min-width: 320px;
+    margin: 0 auto 15px;
+    border-top: 1px solid #ac1702;
+padding: 10px 20px 0;
 }
