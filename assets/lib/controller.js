@@ -22,12 +22,8 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		$scope.lotteryItem = data.data[0];
 	});
   $scope.goLottery = function(){
-		// $window.alert($scope.status);
 		if(!$scope.status){
-			// $window.alert('fb login fn');
 			$facebook.login();
-			// $window.alert(a);
-			// $window.alert('after facebook login function',$facebook.isConnected());
 		}else{
 			$lottery.postVote($scope.userData)
 			.then(function(response){
@@ -74,7 +70,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		$window.open(url,'facebook-share-dialog','width=626,height=436');
 	}
 	$scope.owlItems = [
-		{"videoId": "SBjAwupdFsU", "videoTitle": "《HERO@TAIWAN_台灣真英雄》義勇助人-甘惠忠", "startTime": "1484139600"},
+		{"videoId": "SBjAwupdFsU", "videoTitle": "完娛食堂 咕雞咕雞團圓飯 請鎖定1/11 21:00首播", "startTime": "1484139600"},
 	];
 	angular.forEach($scope.owlItems, function(data, index){
 		data.imgSrc = 'http://img.youtube.com/vi/'+data.videoId+'/0.jpg';
@@ -118,7 +114,6 @@ app.controller('postController', ['$scope', '$window', '$http', 'roosterService'
 			className: 'portfolio-item pf-media pf-icons',
 		}
 		$scope.posts.splice(index, 0, ad);
-		// $scope.showpost = $scope.posts.splice(0,6);
 	});
 
 	$scope.load = function(){
