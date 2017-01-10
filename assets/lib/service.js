@@ -12,12 +12,6 @@ app.factory('roosterService', ['$http', function($http){
       var projectId = 2856;
       var requestUrl = endpoint.projectNews + '/' + projectId ;
       return $http.get(requestUrl);
-      // .then(function (response) {
-      //   console.log('get', response)
-      // })
-      // .catch(function (data) {
-      //   // Handle error here
-      // });
     },
     video: function(){
       return;
