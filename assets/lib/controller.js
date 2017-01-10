@@ -64,9 +64,8 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 			$window.alert('請先點選【我要抽獎】');
 			return;
 		}
-		var url = "https://www.youtube.com/embed/"+videoId;
-		var href= "http://event.setn.com/2017chinesenewyear/";
-		var url = "http://www.facebook.com/sharer/sharer.php?u="+href;
+		var url = ($scope.date < 1484139600) ? "http://event.setn.com/2017chinesenewyear/" : "https://www.youtube.com/embed/" + videoId;
+		url = "http://www.facebook.com/sharer/sharer.php?u=" + url;
 		$window.open(url,'facebook-share-dialog','width=626,height=436');
 	}
 	$scope.owlItems = [
