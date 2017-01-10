@@ -19,8 +19,7 @@ var app = angular.module('roosterApp', [
                      .defineSlot('/18689016/setn_event_2017chinesenewyear_m_300x250', [300, 250], 'ad-m-300x250')
                      .defineSlot('/18689016/setn_event_2017chinesenewyear_m_300x600', [300, 600], 'ad-m-300x600')
                      .defineSlot('/18689016/setn_event_2017chinesenewyear_m_300x50', [300, 50], 'ad-m-300x50')
-                     .defineSlot('/18689016/setn_event_202x362_01', [200, 200], 'dfp-default-0')
-                     ;
+                     .defineSlot('/18689016/setn_event_202x362_01', [200, 200], 'dfp-default-0');
 }).run(['$rootScope', '$window', function($rootScope, $window) {
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
