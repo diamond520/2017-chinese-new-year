@@ -16,7 +16,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 	$scope.date = Math.floor(Date.now() / 1000);
 
 	// get init status when user first came 
-	$lottery.getVoteObject( Date.now())
+	$lottery.getVoteObject()
 	.then(function(data){
 		$scope.vote = data.vote;
 		$scope.lotteryItem = data.data[0];

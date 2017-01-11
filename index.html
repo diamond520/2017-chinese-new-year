@@ -178,13 +178,14 @@
             <div id="oc-slider" class="owl-carousel carousel-widget" data-margin="1" data-nav="true" data-pagi="false" data-items="1" data-merge="true" data-loop="false" data-lazyload="true" data-center="true" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-lg="4">
                 <div class="item-video" data-merge="2">
                     <div class="mv-warp" ng-if="date < owlItems[0].startTime">
-                        <img ng-src="assets/img/live-coming.jpg" style="width:100%;margin:0 auto;">
+                        <img ng-src="assets/img/live-coming.jpg" style="height:100%;width:auto;margin:0 auto;">
                     </div>
-                    <div class="mv-warp" ng-if="date >= owlItems[0].startTime" >
-                        <a class="owl-video" href="https://www.youtube.com/embed/SBjAwupdFsU"></a>
+                    <div class="mv-warp" ng-if="date >= owlItems[0].startTime">
+                        <a class="owl-video" href="https://www.youtube.com/embed/zLoEfm8P3uc"></a>
                     </div>
                     <div class="mv-info">
-                        <div class="mv-title">完娛食堂 咕雞咕雞團圓飯 請鎖定1/11 21:00首播</div>
+                        <div class="mv-title" ng-if="date < owlItems[0].startTime">完娛食堂 咕雞咕雞團圓飯 請鎖定1/11 21:00首播</div>
+                        <div class="mv-title" ng-if="date >= owlItems[0].startTime">［完娛食堂 咕雞咕雞團圓飯］過年送什麼送到心坎裡！</div>
                         <ul class="mv-btn">
                             <li>
                                 <a href="" style="width:52px; height:61px; display: block;">
@@ -192,7 +193,7 @@
                                 </a>
                             </li>
                             <li ng-class="{'inactive':status==false}">
-                                <a class="btn-hover" href="" ng-click="share('SBjAwupdFsU')"><img src="assets/img/btn-fb.png"></a>
+                                <a class="btn-hover" href="" ng-click="share('zLoEfm8P3uc')"><img src="assets/img/btn-fb.png"></a>
                             </li>
                             
                             <li ng-class="{'inactive':lotteryed==true}">
@@ -527,6 +528,10 @@
 
         ga('create', 'UA-37193510-5', 'auto');
         ga('send', 'pageview');
+
+        $( document ).ready(function(){
+            $('.mv-warp').height($('.item-video').width()*0.5625);
+        })
     </script>
 </body>
 </html>
