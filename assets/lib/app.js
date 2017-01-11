@@ -25,7 +25,7 @@ var app = angular.module('roosterApp', [
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8";
+    js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.2";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
   $rootScope.$on('fb.load', function() {
