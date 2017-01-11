@@ -32964,12 +32964,12 @@ ul.switcher-op-selectors li img {
 }
 
 .mv-warp {
-    /*height: 400px;
+    width:100%;
     background-color: #000;
     background-image: url(../img/mv-default.jpg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100% auto;*/
+    background-size: 100% auto;
 }
 
 .mv-box {
