@@ -6,6 +6,7 @@ app.factory('roosterService', ['$http', function($http){
   };
   var endpoint = {
     projectNews: apiGateWay.setn + '/projectnewslist',
+    getNewsContent: apiGateWay.setn + '/getnewscontent',
   };
   return {
     projectnews: function(){
@@ -13,9 +14,11 @@ app.factory('roosterService', ['$http', function($http){
       var requestUrl = endpoint.projectNews + '/' + projectId ;
       return $http.get(requestUrl);
     },
-    video: function(){
-      return;
-    }
+    getnewscontent: function(){
+      var newsId = 216287;
+      var requestUrl = endpoint.getNewsContent + '/' + newsId ;
+      return $http.get(requestUrl);
+    },
   };
 }]);
 

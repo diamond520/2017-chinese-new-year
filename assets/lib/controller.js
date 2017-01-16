@@ -92,6 +92,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 
 app.controller('postController', ['$scope', '$window', '$http', 'roosterService', function($scope, $window, $http, $roosterService){
 	$scope.posts = [];
+
 	$roosterService.projectnews()
 	.then(function(response){
 		var news = response.data[0].newsList;
@@ -103,7 +104,7 @@ app.controller('postController', ['$scope', '$window', '$http', 'roosterService'
 				imgSrc: k.imageFile + k.imageID + '-L.jpg',
 				desc: k.summary, 
 				url: k.url
-			}
+			};
 			$scope.posts.push(item);
 		});
 	}).then(function(){
@@ -111,7 +112,16 @@ app.controller('postController', ['$scope', '$window', '$http', 'roosterService'
 		var ad = {
 			type: 'ad',
 			className: 'portfolio-item pf-media pf-icons',
-		}
+		};
+		var adPost = {
+			type: 'post',
+			className: 'portfolio-item pf-media pf-icons',
+			title: '仙桃牌「通汝飲」帶動女性養身新風潮',
+			imgSrc: 'http://attach.azureedge.net/newsimages/2017/01/14/778215-L.jpg',
+			desc: '具有百年以上歷史的「仙桃牌」，遵循年輕化、國際化目標，於2016年12月領先全球，推出女性漢方保健聖品「通汝飲」，不僅完美傳承六代中醫精華，酸甜好喝的口感及20公克輕巧包裝，更是推翻社會對中藥飲品的想像。', 
+			url: 'http://www.setn.com/News.aspx?NewsID=216287'
+		};
+		$scope.posts.splice(1, 0, adPost);
 		$scope.posts.splice(index, 0, ad);
 	});
 
