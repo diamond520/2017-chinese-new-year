@@ -76,9 +76,9 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 
 	$scope.owlItems = [
 		{
-			"videoId": "zLoEfm8P3uc", 
+			"videoId": "Jot_bDfAoIU", 
 			"videoTitleB": "完娛食堂 咕雞咕雞團圓飯 請鎖定1/11 21:00首播", 
-			"videoTitleA": "［完娛食堂 咕雞咕雞團圓飯］過年送什麼送到心坎裡！", 
+			"videoTitleA": "【完娛食堂 咕雞咕雞團圓飯】 超好吃養生好料", 
 			"startTime": "1484139600"
 		},
 		{
