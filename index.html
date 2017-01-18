@@ -217,14 +217,11 @@
                 </div>
                 <div class="item-video" data-merge="2">
                     <div class="mv-warp" ng-if="date < owlItems[1].startTime">
-                        <img ng-src="" style="height:100%;width:auto;margin:0 auto;">
+                        <!--<img ng-src="assets/img/live-coming.jpg" style="height:100%;width:auto;margin:0 auto;">-->
                     </div>
                     <div class="mv-warp" ng-if="date >= owlItems[1].startTime">
                         <a class="owl-video" href="https://www.youtube.com/embed/B6KsSnjpw90"></a>
                     </div>
-                    <!--<div class="mv-warp">
-                        <a class="owl-video" href="https://www.youtube.com/embed/B6KsSnjpw90"></a>
-                    </div>                  -->
                     <div class="mv-info">
                         <div class="mv-title" ng-if="date < owlItems[1].startTime">{{ owlItems[1].videoTitleB }}</div>
                         <div class="mv-title" ng-if="date >= owlItems[1].startTime">{{ owlItems[1].videoTitleA }}</div>
@@ -250,8 +247,8 @@
                 <ul class="hidden-xs visible-sm visible-md visible-lg" ng-if="owlItems.length > 1">
                     <li ng-repeat="v in owlItems">
                         <a href ng-click="goto($index)">
-                            <img ng-if="date < v.startTime" ng-src="assets/img/live-coming.jpg">
-                            <img ng-if="date >= v.startTime" ng-src="{{ v.imgSrc }}">
+                            <img ng-if="date < v.startTime" ng-src="assets/img/live-coming.jpg" title="{{ v.videoTitleB }}">
+                            <img ng-if="date >= v.startTime" ng-src="{{ v.imgSrc }}" title="{{ v.videoTitleA }}">
                         </a>
                     </li>
                 </ul>
