@@ -10,6 +10,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 	$scope.userData = {
 		auth: {}
 	};
+
 	if (!Date.now) {
 		Date.now = function() { return new Date().getTime(); }
 	}
@@ -21,6 +22,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		$scope.vote = data.vote;
 		$scope.lotteryItem = data.data[0];
 	});
+
   $scope.goLottery = function(){
 		if(!$scope.status){
 			$facebook.login();
@@ -36,6 +38,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 			})
 		}
   };
+
 	$scope.$on('fb.auth.authResponseChange', function() {
 		$scope.status = $facebook.isConnected();
 		if($scope.status) {
@@ -52,6 +55,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 			});
 		}
 	});
+
 	$scope.loginToggle = function() {
 		if($scope.status) {
 			$facebook.logout();
@@ -59,6 +63,7 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 			$facebook.login();
 		}
 	};
+
 	$scope.share = function(videoId){
 		if(!$scope.status){
 			$window.alert('請先點選【我要抽獎】');
@@ -68,12 +73,26 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		url = "http://www.facebook.com/sharer/sharer.php?u=" + url;
 		$window.open(url,'facebook-share-dialog','width=626,height=436');
 	}
+
 	$scope.owlItems = [
-		{"videoId": "SBjAwupdFsU", "videoTitle": "完娛食堂 咕雞咕雞團圓飯 請鎖定1/11 21:00首播", "startTime": "1484139600"},
+		{
+			"videoId": "zLoEfm8P3uc", 
+			"videoTitleB": "完娛食堂 咕雞咕雞團圓飯 請鎖定1/11 21:00首播", 
+			"videoTitleA": "［完娛食堂 咕雞咕雞團圓飯］過年送什麼送到心坎裡！", 
+			"startTime": "1484139600"
+		},
+		{
+			"videoId": "B6KsSnjpw90", 
+			"videoTitleB": "完娛食堂 咕雞咕雞團圓飯 請鎖定1/18 21:00首播", 
+			"videoTitleA": "「圍爐中」完娛食堂咕雞咕雞團圓飯開幕啦! 跟著八三夭、SpeXial、鼓鼓一起真心話大冒險~", 
+			"startTime": "1484744400" //1484744400
+		},
 	];
+
 	angular.forEach($scope.owlItems, function(data, index){
-		data.imgSrc = 'http://img.youtube.com/vi/'+data.videoId+'/0.jpg';
+		data.imgSrc = 'http://img.youtube.com/vi/'+data.videoId+'/hqdefault.jpg';
 	});
+
 	$scope.owlOptions = {
 		loop: true,
 		'nav': true,
@@ -88,6 +107,10 @@ app.controller('slideController', ['$scope', '$window', '$facebook', '$timeout',
 		"items-sm": 3,
 		"items-lg": 4
 	};
+
+	$scope.goto = function(id){
+		$('#oc-slider').trigger('to.owl.carousel', [id, 0, true])
+	}
 }]);
 
 app.controller('postController', ['$scope', '$window', '$http', 'roosterService', function($scope, $window, $http, $roosterService){

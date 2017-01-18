@@ -32966,7 +32966,7 @@ ul.switcher-op-selectors li img {
 .mv-warp {
     width:100%;
     background-color: #000;
-    background-image: url(../img/mv-default.jpg);
+    background-image: url(../img/live-coming.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -32983,6 +32983,7 @@ ul.switcher-op-selectors li img {
 .mv-box ul {
     list-style: none;
     margin-top: 15px;
+    height: 80px;
 }
 
 .mv-box ul li {

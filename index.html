@@ -175,7 +175,20 @@
         <!-- Video
         ============================================= -->
         <section id="slider" class="" style="background-color: #444;" ng-controller="slideController">
-            <div id="oc-slider" class="owl-carousel carousel-widget" data-margin="1" data-nav="true" data-pagi="false" data-items="1" data-merge="true" data-loop="false" data-lazyload="true" data-center="true" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-lg="4">
+            <div id="oc-slider" 
+                    class="owl-carousel carousel-widget" 
+                    data-margin="1" 
+                    data-nav="true" 
+                    data-pagi="false" 
+                    data-items="1" 
+                    data-merge="true" 
+                    data-loop="true" 
+                    data-lazyload="false" 
+                    data-center="true" 
+                    data-items-xxs="1" 
+                    data-items-xs="2" 
+                    data-items-sm="3" 
+                    data-items-lg="4">
                 <div class="item-video" data-merge="2">
                     <div class="mv-warp" ng-if="date < owlItems[0].startTime">
                         <img ng-src="assets/img/live-coming.jpg" style="height:100%;width:auto;margin:0 auto;">
@@ -184,8 +197,8 @@
                         <a class="owl-video" href="https://www.youtube.com/embed/zLoEfm8P3uc"></a>
                     </div>
                     <div class="mv-info">
-                        <div class="mv-title" ng-if="date < owlItems[0].startTime">完娛食堂 咕雞咕雞團圓飯 請鎖定1/11 21:00首播</div>
-                        <div class="mv-title" ng-if="date >= owlItems[0].startTime">［完娛食堂 咕雞咕雞團圓飯］過年送什麼送到心坎裡！</div>
+                        <div class="mv-title" ng-if="date < owlItems[0].startTime">{{ owlItems[0].videoTitleB }}</div>
+                        <div class="mv-title" ng-if="date >= owlItems[0].startTime">{{ owlItems[0].videoTitleA }}</div>
                         <ul class="mv-btn">
                             <li>
                                 <a href="" style="width:52px; height:61px; display: block;">
@@ -202,12 +215,44 @@
                         </ul>
                     </div>
                 </div>
+                <div class="item-video" data-merge="2">
+                    <div class="mv-warp" ng-if="date < owlItems[1].startTime">
+                        <img ng-src="" style="height:100%;width:auto;margin:0 auto;">
+                    </div>
+                    <div class="mv-warp" ng-if="date >= owlItems[1].startTime">
+                        <a class="owl-video" href="https://www.youtube.com/embed/B6KsSnjpw90"></a>
+                    </div>
+                    <!--<div class="mv-warp">
+                        <a class="owl-video" href="https://www.youtube.com/embed/B6KsSnjpw90"></a>
+                    </div>                  -->
+                    <div class="mv-info">
+                        <div class="mv-title" ng-if="date < owlItems[1].startTime">{{ owlItems[1].videoTitleB }}</div>
+                        <div class="mv-title" ng-if="date >= owlItems[1].startTime">{{ owlItems[1].videoTitleA }}</div>
+                        <ul class="mv-btn">
+                            <li>
+                                <a href="" style="width:52px; height:61px; display: block;">
+                                    <div class="fb-like" data-href="https://www.facebook.com/setshowbiz/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+                                </a>
+                            </li>
+                            <li ng-class="{'inactive':status==false}">
+                                <a class="btn-hover" href="" ng-click="share('B6KsSnjpw90')"><img src="assets/img/btn-fb.png"></a>
+                            </li>
+                            
+                            <li ng-class="{'inactive':lotteryed==true}">
+                                <a ng-class="btn-hover" href="" ng-click="goLottery()"><img  src="assets/img/btn-join.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="mv-box">
                 <img src="assets/img/mv-title.png">
                 <ul class="hidden-xs visible-sm visible-md visible-lg" ng-if="owlItems.length > 1">
                     <li ng-repeat="v in owlItems">
-                        <img ng-src="{{ v.imgSrc }}">
+                        <a href ng-click="goto($index)">
+                            <img ng-if="date < v.startTime" ng-src="assets/img/live-coming.jpg">
+                            <img ng-if="date >= v.startTime" ng-src="{{ v.imgSrc }}">
+                        </a>
                     </li>
                 </ul>
                 <div class="center mv-banner">
